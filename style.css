@@ -34,7 +34,6 @@ header {
 
 
   body{
-    overflow-x: hidden;
     margin:0;
     font-family: 'Noto Sans', sans-serif;
   }
@@ -162,6 +161,8 @@ ol {
 }
 
 .gallery {
+    overflow-x: hidden;
+    width: 140%;
     display: flex;
     justify-content: flex-start;
     gap: 7px;
@@ -291,6 +292,7 @@ ol {
   .gallery {
     flex-direction: column;
     align-items: left;
+    width: 100%;
   }
 
   .gallery img {
@@ -331,7 +333,7 @@ ol {
 }
 
 #prizes {
-    width: 350px;
+    width: 330px;
     position: absolute;
     margin-top: 470px;
     display: block;
