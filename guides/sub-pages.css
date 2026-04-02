@@ -6,47 +6,39 @@ header {
     color: var(--white);
     padding: var(--spacing-6) var(--spacing-0) var(--spacing-6);
     text-align: center;
+    
   }
   
-  .banner {
+  .go-back {
     position: absolute;
-    top: -10px;
-    left: 50px
+    top: 10px;
+    left: 50px;
   }
   
-  .banner img {
-    height: 80px;
+  .go-back img {
+    transition: transform 0.2s ease;
+    height: 120px;
   }
   
-  .banner:hover img {
+  .go-back:hover img {
     animation: wave-flag 0.5s linear infinite alternate;
-  }
+    transform: translateX(-8px);
+}
   
-  
-  @keyframes wave-flag {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-5deg);
-    }
-  }
-
-
   body{
     margin:0;
     font-family: 'Noto Sans', sans-serif;
   }
 
 #hero {
-    background-image: url("Assets/bg.png");
+    background-image: url("Images/bg.png");
     background-repeat: repeat;
     background-size: 350px;   
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 110px;
+    padding-bottom: 175px;
 }
 
 header{
@@ -54,56 +46,8 @@ header{
     text-align: left;
 }
 
-
-.hero-items-container {
-    width: 70vw;
-    display: flex;
-    gap: 20px;
-    /*border: 2px solid green;*/
-}
-
-.tag-container {
-    flex: 1;
-    max-width: 230px; 
-    /*border: 2px solid blue;*/
-}
-
-#tag1 {
-    width: 100%;
-    margin-top: -90px;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-#tag1:hover {
-    transform: translateY(15px);
-}
-
-.right-container{
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /*border: 3px solid red;*/
-}
-
-.hero-image-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
-.hero-image-container img {
-    margin-top: 50px;
-    height: 350px;
-    width: auto;
-    display: block;
-    /*border: 3px solid purple;*/
-}
-
 .section2 {
-    background-image: url("Assets/bg-shadow.png");
+    background-image: url("Images/bg-shadow.png");
     background-repeat: repeat-x;
     background-size: 350px;   
     margin: 0;
@@ -127,42 +71,42 @@ header{
 }
 
 .section2-container {
-    margin-top: 90px;
-    width: 56vw;
+    margin-top: 60px;
+    width: 70vw;
+    margin-right: 0px;
     /*border: 2px solid green;*/
-    padding-right: 14vw;
-}
-
-.tag-container {
-    flex: 1;
-    max-width: 230px; 
-    /*border: 2px solid blue;*/
-}
-
-#tag2 {
-    width: 230px;
-    position: absolute;
-    margin-top: 14px;
-    display: block;
-    right: 70px;
 }
 
 h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+h2{
     font-size: 25px;
     margin-bottom: 10px;
 }
 
 li {
     padding: 3px;
+    
 }
 
 ol {
+    
     margin-bottom: 0px;
+}
+
+ul{
+    padding-left: 35px;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .gallery {
     overflow-x: hidden;
-    width: 140%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     gap: 7px;
@@ -183,7 +127,7 @@ ol {
     
     color: #FBDA0C;
     font-size: 14px;
-    background-image: url("Assets/footer-bg.png");
+    background-image: url("Images/footer-bg.png");
     background-repeat: repeat-x;
     background-size: 350px; 
 
@@ -244,48 +188,25 @@ ol {
 
 @media (max-width: 768px) {
 
-  .banner {
-    left: 10px;
+    #hero{
+        padding-bottom: 50px;
+    }
+  .go-back {
+    padding-top: 50px;
+    position: static;
+    display: flex;
+    justify-content: center;    
   }
 
-  .banner img {
-    height: 60px;
-  }
-
-  /* HERO LAYOUT */
-  .hero-items-container {
-    width: 90vw;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tag-container {
-    max-width: 180px;
-  }
-
-  #tag1 {
-    margin-top: -40px;
-  }
-
-  .hero-image-container {
-    justify-content: center;
-  }
-
-  .hero-image-container img {
-    height: auto;
-    width: 90%;
-    margin-top: 20px;
+  .go-back img {
+    height: 135px;
   }
 
   /* SECTION 2 */
   .section2-container {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 90vw;
     padding-right: 0;
-  }
-
-  #tag2 {
-    visibility: hidden;
   }
 
   /* GALLERY */
@@ -326,16 +247,4 @@ ol {
 
     }
 
-    #prizes {
-        visibility: hidden;
-    }
-
-}
-
-#prizes {
-    width: 330px;
-    position: absolute;
-    margin-top: 470px;
-    display: block;
-    right: 0px;
 }

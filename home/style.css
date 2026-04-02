@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+header {
+    background: var(--red);
+    color: var(--white);
+    padding: var(--spacing-6) var(--spacing-0) var(--spacing-6);
+    text-align: center;
+  }
+  
+  .banner {
+    position: absolute;
+    top: -10px;
+    left: 50px
+  }
+  
+  .banner img {
+    height: 80px;
+  }
+  
+  .banner:hover img {
+    animation: wave-flag 0.5s linear infinite alternate;
+  }
+  
+  
+  @keyframes wave-flag {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+
+
+  body{
+    margin:0;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+#hero {
+    background-image: url("Images/bg.png");
+    background-repeat: repeat;
+    background-size: 350px;   
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 110px;
+}
+
+header{
+    width: 100%;
+    text-align: left;
+}
+
+
+.hero-items-container {
+    width: 70vw;
+    display: flex;
+    gap: 20px;
+}
+
+.tag-container {
+    flex: 1;
+    max-width: 230px; 
+    /*border: 2px solid blue;*/
+}
+
+#tag1 {
+    width: 100%;
+    margin-top: -90px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#tag1:hover {
+    transform: translateY(15px);
+}
+
+.right-container{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*border: 3px solid red;*/
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.hero-image-container img {
+    margin-top: 50px;
+    height: 350px;
+    width: auto;
+    display: block;
+}
+
+.section2 {
+    background-image: url("Images/bg-shadow.png");
+    background-repeat: repeat-x;
+    background-size: 350px;   
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 3px solid yellow;*/
+}
+
+.section2 a{
+    color: #0158a8;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.section2 a:hover{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+
+}
+
+.section2-container {
+    margin-top: 90px;
+    width: 56vw;
+    /*border: 2px solid green;*/
+    padding-right: 14vw;
+}
+
+.tag-container {
+    flex: 1;
+    max-width: 230px; 
+    /*border: 2px solid blue;*/
+}
+
+#tag2 {
+    width: 230px;
+    position: absolute;
+    margin-top: 14px;
+    display: block;
+    right: 70px;
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+li {
+    padding: 3px;
+}
+
+ol {
+    margin-bottom: 0px;
+}
+
+.gallery {
+    overflow-x: hidden;
+    width: 140%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 7px;
+    margin-top:  20px;
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    height: 250px;
+    width: auto;
+    display: block;
+}
+.section3 {
+    background-color: #0158a8;
+    height: 200px;
+    margin: 0;
+    margin-top: 70px;
+    
+    color: #FBDA0C;
+    font-size: 14px;
+    background-image: url("Images/footer-bg.png");
+    background-repeat: repeat-x;
+    background-size: 350px; 
+
+}
+
+.section3 h3{
+    font-weight: 850;
+    font-size: 19px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.section3 a{
+    font-weight: 650;
+    font-size: 16px;
+    color: #FBDA0C;
+    text-decoration: none;
+
+}
+
+.section3 a:hover{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+
+}
+
+
+
+.footer-section{
+    width: 70vw;
+    display: flex;
+    justify-self: center;
+    gap: 20px;
+    /*border: 3px solid blue;*/
+
+}
+
+.footer-left {
+    margin-top: 80px;
+    flex: 1.5;
+    text-align: left;
+
+    /*border: 2px solid red;*/
+}
+
+.footer-right {
+    margin-top: 80px;
+    flex: 2;
+    text-align: right;
+    /*border: 2px solid green;*/
+}
+
+#subtext {
+    font-weight: 250;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .banner {
+    left: 10px;
+  }
+
+  .banner img {
+    height: 60px;
+  }
+
+  /* HERO LAYOUT */
+  .hero-items-container {
+    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag-container {
+    max-width: 180px;
+  }
+
+  #tag1 {
+    justify-self: center;
+    margin-top: -45px;
+    width: 150%;
+  }
+
+  .hero-image-container {
+    justify-content: center;
+  }
+
+  .hero-image-container img {
+    height: auto;
+    width: 109%;
+    margin-top: 20px;
+    content: url("Images/skadises-mobile.png");
+
+  }
+
+  /* SECTION 2 */
+  .section2-container {
+    margin-top: 50px;
+    width: 90vw;
+    padding-right: 0;
+  }
+
+  #tag2 {
+    visibility: hidden;
+  }
+
+  /* GALLERY */
+  .gallery {
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FOOTER */
+  .footer-section {
+    padding-top: 50px;
+    width: 90vw;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+    .section3 {
+        margin-top: 40px;
+        height: auto;
+        padding-bottom: 35px;
+    
+    }
+
+    .section3 a{
+        line-height: 27px;
+
+    }
+
+    #prizes {
+        visibility: hidden;
+    }
+
+}
+
+#prizes {
+    width: 350px;
+    position: absolute;
+    margin-top: 520px;
+    display: block;
+    right: 0px;
+}
+
+#prizes:hover{
+  content: url("Images/prizes2.png");
+
+}
